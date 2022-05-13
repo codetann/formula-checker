@@ -30,7 +30,7 @@ const checkSamsClub = async () => {
 
     const data = await res.json();
     const isInStock = {
-      inStore: data.payload.products[0].skus[0].clubOffer.inventory.qtyLeft > 0,
+      store: data.payload.products[0].skus[0].clubOffer.inventory.qtyLeft > 0,
       online:
         data.payload.products[0].skus[0].onlineOffer.inventory.qtyLeft > 0,
     };
